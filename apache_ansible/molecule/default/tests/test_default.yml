@@ -1,0 +1,39 @@
+---
+
+package:
+  httpd:
+    installed: true
+#    versions:
+#      - 2.4.6
+
+service:
+  httpd:
+    enabled: true
+    running: true
+
+process:
+  httpd:
+    running: true
+
+port:
+  tcp:80:
+    listening: true
+
+http:
+  #http://localhost:8080/test.html:
+  http://localhost:
+    status: 404
+#    body: [Apache]
+
+#file:
+#  /var/www/html/test.html:
+#    exists: true
+#    mode: "0640"
+#    owner: apache
+#    group: apache
+
+#command:
+#  httpd -v |grep -i version:
+#    exit-status: 0
+#    stdout:
+#      - "Server version: Apache/2.4.6 (CentOS)"
